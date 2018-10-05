@@ -18,7 +18,8 @@ def value(name):
     """return the value of a name"""
     value = 0
     for letter in name: #run through the name to give each letter its value
-        value += ord(letter)-64 #ord() gives the ascii number so i had to substract 64 to have the right number
+        value += ord(letter)-64 #ord() gives the ascii number so I had to substract 64 to have the right number
+                                #meaning 1 for A, 2 for B ...
     return value
 
 assert(value('COLIN') == 53)
@@ -32,7 +33,7 @@ def solve(filepath):
         #run through the list and give the row of each name
         #the 1 in enumerate is here to start the row at 1 and not at 0 
         #which would 'erase' the first name
-        ans += value(name)*coef #the ans is the sum of all the name value * coef whiwh their row
+        ans += value(name)*coef #the ans is the sum of all the name value * coef which is their row
     return ans
 
 assert(solve('p022_names.txt') == 871198282)
