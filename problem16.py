@@ -5,7 +5,7 @@ def solve(n):
     """Solve the 16th Euler problem. Return the sum of the digits of 2**n."""
     number = str(2**n)
     sum = 0
-    letter = 'a'
+    letter = str()
     for i in number:
         letter = int(i)
         sum+=letter
